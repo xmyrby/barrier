@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <event-sheet active="1" order="0">Game events</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="1" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="1" name="Text" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="object-folder/Login screen/" />
+        <folder expanded="1" path="object-folder/Game/" />
+        <folder expanded="1" path="object-folder/Lobby/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="0" path="music-folder/" />
+        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/TextBox/" />
+        <folder expanded="1" path="animation-folder/AimSpot/" />
+        <folder expanded="1" path="animation-folder/Peer/" />
+        <folder expanded="1" path="animation-folder/TurretLeft/" />
+        <folder expanded="1" path="animation-folder/TurretRight/" />
+        <folder expanded="1" path="animation-folder/Bullet/" />
+        <folder expanded="1" path="animation-folder/BG/" />
+        <folder expanded="1" path="animation-folder/Shot/" />
+        <folder expanded="1" path="animation-folder/AimLine/" />
+        <folder expanded="1" path="animation-folder/ParticleShot/" />
+        <folder expanded="1" path="animation-folder/Flame/" />
+        <folder expanded="1" path="animation-folder/Border/" />
+        <folder expanded="1" path="animation-folder/Frame/" />
+        <folder expanded="1" path="animation-folder/Wave/" />
+        <folder expanded="1" path="animation-folder/Signpost/" />
+        <folder expanded="1" path="animation-folder/Detector/" />
+        <folder expanded="1" path="animation-folder/Shielder/" />
+        <folder expanded="1" path="animation-folder/Map/" />
+        <folder expanded="1" path="animation-folder/MapPoint/" />
+        <folder expanded="1" path="animation-folder/Splinters/" />
+        <folder expanded="1" path="animation-folder/Damaged/" />
+        <folder expanded="1" path="animation-folder/Area/" />
+        <folder expanded="1" path="animation-folder/Turret/" />
+        <folder expanded="1" path="animation-folder/TurretLegs/" />
+        <folder expanded="1" path="animation-folder/TurretFrame/" />
+        <folder expanded="1" path="animation-folder/AbilityBack/" />
+        <folder expanded="1" path="animation-folder/Ability/" />
+        <folder expanded="1" path="animation-folder/Num/" />
+        <folder expanded="1" path="animation-folder/TargetPoint/" />
+        <folder expanded="1" path="animation-folder/Rope/" />
+        <folder expanded="1" path="animation-folder/Helper/" />
+        <folder expanded="1" path="animation-folder/MapHelper/" />
+        <folder expanded="1" path="animation-folder/Spawn/" />
+        <folder expanded="1" path="animation-folder/Explosion/" />
+        <folder expanded="1" path="animation-folder/Collision/" />
+        <folder expanded="1" path="animation-folder/Mine/" />
+        <folder expanded="1" path="animation-folder/CheckPoint/" />
+        <folder expanded="1" path="animation-folder/PointsTable/" />
+        <folder expanded="1" path="animation-folder/StatsBack/" />
+        <folder expanded="1" path="animation-folder/StatsLine/" />
+        <folder expanded="1" path="animation-folder/FrameStats/" />
+        <folder expanded="1" path="animation-folder/Winners/" />
+        <folder expanded="1" path="animation-folder/LookMap/" />
+        <folder expanded="1" path="animation-folder/SynthTarget/" />
+        <folder expanded="1" path="animation-folder/Synthetic/" />
+        <folder expanded="1" path="animation-folder/SyntheticFrame/" />
+        <folder expanded="1" path="animation-folder/SyntheticFlame/" />
+        <folder expanded="1" path="animation-folder/SyntheticMapPoint/" />
+        <folder expanded="1" path="animation-folder/SyntheticSignPost/" />
+        <folder expanded="1" path="animation-folder/PlayerFrame/" />
+        <folder expanded="1" path="animation-folder/Icon/" />
+        <folder expanded="1" path="animation-folder/Button/" />
+        <folder expanded="1" path="animation-folder/SelectedClass/" />
+    </folders-expanded>
+</c2uistate>

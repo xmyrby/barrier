@@ -1,0 +1,1429 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Login events</name>
+    <events>
+        <comment>The alias to pass to the next layout.</comment>
+        <variable comment="Name entered on login screen" constant="0" name="MyUsername" sid="2622484095485436" static="0" type="text"></variable>
+        <event-block any="1" sid="2250300775226276">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="2494264979247668" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+                <condition id="6" name="On object clicked" sid="800855037029451" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Button</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="435070523871509" type="Audio">
+                    <param id="0" name="Audio file">Button</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-7" name="Set size" sid="320849983425330" type="Button">
+                    <param id="0" name="Width">Self.Width-15</param>
+                    <param id="1" name="Height">Self.Height-15</param>
+                </action>
+                <action id="-16" name="Wait" sid="145558956629466" type="System">
+                    <param id="0" name="Seconds">0.05</param>
+                </action>
+                <action id="-7" name="Set size" sid="837696433949774" type="Button">
+                    <param id="0" name="Width">Self.Width+15</param>
+                    <param id="1" name="Height">Self.Height+15</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="4386750916393495">
+                    <conditions>
+                        <condition id="0" inverted="1" name="Compare text" sid="5037371393004393" type="NameTextBox">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="12" name="Supports multiplayer" sid="1583940091524849" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="383394030999022" type="System">
+                            <param id="0" name="Variable">MyUsername</param>
+                            <param id="1" name="Value">NameTextBox.Text</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="6347285549464009" type="System">
+                            <param id="0" name="Layout">Game</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="598731285454083">
+            <conditions>
+                <condition id="2" name="Is playing" sid="446582966149314" type="BG">
+                    <param id="0" name="Animation">&quot;BG&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="158878204737045" type="BG">
+                    <param id="0" name="X">Mouse.AbsoluteX/100-561</param>
+                    <param id="1" name="Y">Mouse.AbsoluteY/100-357</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="330404269531613">
+            <conditions>
+                <condition id="2" name="Is playing" sid="617743412244336" type="BG">
+                    <param id="0" name="Animation">&quot;BG1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="833510382021359" type="BG">
+                    <param id="0" name="X">Mouse.AbsoluteX/75-981</param>
+                    <param id="1" name="Y">Mouse.AbsoluteY/75-580</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="224708304176878">
+            <conditions>
+                <condition id="2" name="Is playing" sid="949069623231236" type="BG">
+                    <param id="0" name="Animation">&quot;BG2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="709712297963421" type="BG">
+                    <param id="0" name="X">Mouse.AbsoluteX/50-1603</param>
+                    <param id="1" name="Y">Mouse.AbsoluteY/50-900</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="843452761266613">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="578206710478168" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="175456217881739" type="NameTextBox">
+                    <param id="0" name="X">Mouse.AbsoluteX/25+442</param>
+                    <param id="1" name="Y">Mouse.AbsoluteY/25+409</param>
+                </action>
+                <action id="-3" name="Set position" sid="126945079439321" type="TextBox">
+                    <param id="0" name="X">Mouse.AbsoluteX/25+597</param>
+                    <param id="1" name="Y">Mouse.AbsoluteY/25+434</param>
+                </action>
+                <action id="-3" name="Set position" sid="303951136098892" type="Button">
+                    <param id="0" name="X">Mouse.AbsoluteX/25+919</param>
+                    <param id="1" name="Y">Mouse.AbsoluteY/25+434</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="248369728982635" type="ButtonText">
+                    <param id="0" name="Object">Button</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="421954387027722" type="NameTextBox">
+                    <param id="0" name="Property name">&quot;background-color&quot;</param>
+                    <param id="1" name="Value">&quot;transparent&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="834664540518109" type="NameTextBox">
+                    <param id="0" name="Property name">&quot;border&quot;</param>
+                    <param id="1" name="Value">&quot;transparent&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="879432898576267" type="NameTextBox">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">&quot;1em&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="685928150618177" type="NameTextBox">
+                    <param id="0" name="Property name">&quot;color&quot;</param>
+                    <param id="1" name="Value">&quot;white&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="656299752247160" type="NameTextBox">
+                    <param id="0" name="Property name">&quot;font-family&quot;</param>
+                    <param id="1" name="Value">&quot;chavaregular&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="532539155568438" type="ButtonText">
+                    <param id="0" name="Text">Button.Text&amp;&quot;&quot;</param>
+                </action>
+                <action id="-7" name="Set size" sid="299450364328440" type="ButtonText">
+                    <param id="0" name="Width">Button.Width</param>
+                    <param id="1" name="Height">Button.Height</param>
+                </action>
+                <action id="5" name="Set web font" sid="529642935461288" type="Text">
+                    <param id="0" name="Family name">&quot;chavaregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;chava.css&quot;</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="504170467171917" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>0-class&#x0D;&#x0A;1-maxhp&#x0D;&#x0A;2-attackspeed&#x0D;&#x0A;3-speed&#x0D;&#x0A;4-bulletspeed&#x0D;&#x0A;5-damage&#x0D;&#x0A;6-maxshield&#x0D;&#x0A;7-block chance&#x0D;&#x0A;8-shield reg&#x0D;&#x0A;9-health reg&#x0D;&#x0A;10-speed boost&#x0D;&#x0A;11-attack boost&#x0D;&#x0A;12-detector size&#x0D;&#x0A;13-RT</comment>
+        <event-block sid="153457065092919">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="121852790904772" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="551500009430561" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Flicker</comment>
+                <event-block sid="873119255478782">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="204971513827256" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="617009966116273" type="ShipParameters">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Flicker&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="943945490808357" type="ShipParameters">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">70</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="527572638401059" type="ShipParameters">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">0.18</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="280539599230458" type="ShipParameters">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">250</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="203261496939697" type="ShipParameters">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">500</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="527082673200596" type="ShipParameters">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">4</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="984222497446558" type="ShipParameters">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">25</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="605699957964010" type="ShipParameters">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">22</param>
+                        </action>
+                        <action disabled="1" id="3" name="Set at XY" sid="188297004919585" type="ShipParameters">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action disabled="1" id="3" name="Set at XY" sid="599486253435132" type="ShipParameters">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">99</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="109137519593609" type="ShipParameters">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">3</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="895816880079978" type="ShipParameters">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">5</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="728309086651276" type="ShipParameters">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">75</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="749969109975373" type="ShipParameters">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">0.04</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="676034209531367" type="ShipParameters">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">250</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="370910002141940" type="ShipParameters">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Blocker</comment>
+                <event-block sid="513303374661414">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="611840377627874" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="851685822058231" type="ShipParameters">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">&quot;Blocker&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="519311815101999" type="ShipParameters">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">215</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="112144414508855" type="ShipParameters">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">0.65</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="515056713682520" type="ShipParameters">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">125</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="184455841211531" type="ShipParameters">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">900</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="754374798905250" type="ShipParameters">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">15</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="246244817432877" type="ShipParameters">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">75</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="710225603715527" type="ShipParameters">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">35</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="518221353924097" type="ShipParameters">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">5</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="737012594416632" type="ShipParameters">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">8</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="701470761859148" type="ShipParameters">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">30</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="113040908947864" type="ShipParameters">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">0.2</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="862276137540873" type="ShipParameters">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">400</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="732703055955203" type="ShipParameters">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">30</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Healer</comment>
+                <event-block sid="792660442953431">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="605738677007309" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="778992254589111" type="ShipParameters">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">&quot;Healer&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="784423377936938" type="ShipParameters">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">85</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="637812981275597" type="ShipParameters">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">0.06</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="857899357244362" type="ShipParameters">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">315</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="848452288616265" type="ShipParameters">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">100</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="628893423381391" type="ShipParameters">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">2</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="520012611382683" type="ShipParameters">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">25</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="287246964995894" type="ShipParameters">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">10</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="596583123180019" type="ShipParameters">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">8</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="420224272528703" type="ShipParameters">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">10</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="490655321988146" type="ShipParameters">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">45</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="352859077083158" type="ShipParameters">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">0.005</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="107247015773768" type="ShipParameters">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">300</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="575233812581697" type="ShipParameters">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">40</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Engineer</comment>
+                <event-block sid="929006416792279">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="325557228704570" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="134929812061788" type="ShipParameters">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">&quot;Engineer&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="688522396007460" type="ShipParameters">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">70</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="254773756724886" type="ShipParameters">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">0.5</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="536116422573738" type="ShipParameters">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">290</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="625772913615078" type="ShipParameters">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">575</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="129633042045952" type="ShipParameters">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">3</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="125072396292547" type="ShipParameters">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">30</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="780516622295814" type="ShipParameters">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">8</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="491199942994929" type="ShipParameters">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">7</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="338666918961527" type="ShipParameters">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">5</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="637213996918668" type="ShipParameters">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">80</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="958745151842150" type="ShipParameters">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">0.10</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="643921273692714" type="ShipParameters">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">200</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="586648565462422" type="ShipParameters">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">15</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Apis</comment>
+                <event-block sid="520757807855241">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="757205118814485" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="459490344788695" type="ShipParameters">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">4</param>
+                            <param id="2" name="Value">&quot;Apis&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="203674732048967" type="ShipParameters">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">4</param>
+                            <param id="2" name="Value">50</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="827377829747985" type="ShipParameters">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">4</param>
+                            <param id="2" name="Value">0.15</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="510852865167102" type="ShipParameters">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">4</param>
+                            <param id="2" name="Value">300</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="235153047619127" type="ShipParameters">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">4</param>
+                            <param id="2" name="Value">300</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="490187520470523" type="ShipParameters">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Y">4</param>
+                            <param id="2" name="Value">2</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="287424164524374" type="ShipParameters">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">4</param>
+                            <param id="2" name="Value">45</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="962916434496715" type="ShipParameters">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">4</param>
+                            <param id="2" name="Value">15</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="935867637683337" type="ShipParameters">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Y">4</param>
+                            <param id="2" name="Value">5</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="708254567071415" type="ShipParameters">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Y">4</param>
+                            <param id="2" name="Value">5</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="180658693738747" type="ShipParameters">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Y">4</param>
+                            <param id="2" name="Value">25</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="504922265359719" type="ShipParameters">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Y">4</param>
+                            <param id="2" name="Value">0.05</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="774881021899970" type="ShipParameters">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Y">4</param>
+                            <param id="2" name="Value">400</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="612295170431587" type="ShipParameters">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Y">4</param>
+                            <param id="2" name="Value">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Dodger</comment>
+                <event-block sid="285961534228396">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="716240415397746" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="785601397837071" type="ShipParameters">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">5</param>
+                            <param id="2" name="Value">&quot;Dodger&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="446865738692949" type="ShipParameters">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">5</param>
+                            <param id="2" name="Value">70</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="635680697475479" type="ShipParameters">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">5</param>
+                            <param id="2" name="Value">0.75</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="303285568476386" type="ShipParameters">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">5</param>
+                            <param id="2" name="Value">250</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="325182589916505" type="ShipParameters">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">5</param>
+                            <param id="2" name="Value">700</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="597069239819359" type="ShipParameters">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Y">5</param>
+                            <param id="2" name="Value">7</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="653897481825023" type="ShipParameters">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">5</param>
+                            <param id="2" name="Value">30</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="629805544822718" type="ShipParameters">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">5</param>
+                            <param id="2" name="Value">20</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="480912206971341" type="ShipParameters">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Y">5</param>
+                            <param id="2" name="Value">4</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="174813882407858" type="ShipParameters">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Y">5</param>
+                            <param id="2" name="Value">9</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="622121288214857" type="ShipParameters">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Y">5</param>
+                            <param id="2" name="Value">50</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="206393124643340" type="ShipParameters">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Y">5</param>
+                            <param id="2" name="Value">0.15</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="797344020207517" type="ShipParameters">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Y">5</param>
+                            <param id="2" name="Value">250</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="932547356921774" type="ShipParameters">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Y">5</param>
+                            <param id="2" name="Value">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Slayer</comment>
+                <event-block sid="808699861127175">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="630283243154630" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="925149898239648" type="ShipParameters">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">6</param>
+                            <param id="2" name="Value">&quot;Slayer&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="458661449569327" type="ShipParameters">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">6</param>
+                            <param id="2" name="Value">55</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="814384444774135" type="ShipParameters">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">6</param>
+                            <param id="2" name="Value">0.45</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="151276457225545" type="ShipParameters">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">6</param>
+                            <param id="2" name="Value">320</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="510840014117695" type="ShipParameters">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">6</param>
+                            <param id="2" name="Value">750</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="978428746825150" type="ShipParameters">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Y">6</param>
+                            <param id="2" name="Value">7</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="344718957835267" type="ShipParameters">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">6</param>
+                            <param id="2" name="Value">50</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="128070282781587" type="ShipParameters">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">6</param>
+                            <param id="2" name="Value">25</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="777062155416772" type="ShipParameters">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Y">6</param>
+                            <param id="2" name="Value">5</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="845437683296779" type="ShipParameters">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Y">6</param>
+                            <param id="2" name="Value">2</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="965347474932856" type="ShipParameters">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Y">6</param>
+                            <param id="2" name="Value">-220</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="225706684709688" type="ShipParameters">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Y">6</param>
+                            <param id="2" name="Value">0.1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="628730684650100" type="ShipParameters">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Y">6</param>
+                            <param id="2" name="Value">350</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="104264568079134" type="ShipParameters">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Y">6</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Vampire</comment>
+                <event-block sid="228326853836414">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="603850236194326" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="779469481286198" type="ShipParameters">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">7</param>
+                            <param id="2" name="Value">&quot;Vampire&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="849731329748373" type="ShipParameters">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">7</param>
+                            <param id="2" name="Value">125</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="908806522466511" type="ShipParameters">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">7</param>
+                            <param id="2" name="Value">0.7</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="800112198918642" type="ShipParameters">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">7</param>
+                            <param id="2" name="Value">215</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="210190217128333" type="ShipParameters">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">7</param>
+                            <param id="2" name="Value">600</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="318207967581919" type="ShipParameters">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Y">7</param>
+                            <param id="2" name="Value">8</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="997292275435495" type="ShipParameters">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">7</param>
+                            <param id="2" name="Value">25</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="271230097162557" type="ShipParameters">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">7</param>
+                            <param id="2" name="Value">10</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="954615241328415" type="ShipParameters">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Y">7</param>
+                            <param id="2" name="Value">5</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="701736732594083" type="ShipParameters">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Y">7</param>
+                            <param id="2" name="Value">12</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="869886290285192" type="ShipParameters">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Y">7</param>
+                            <param id="2" name="Value">185</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="743308344223148" type="ShipParameters">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Y">7</param>
+                            <param id="2" name="Value">0.2</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="883466361315639" type="ShipParameters">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Y">7</param>
+                            <param id="2" name="Value">500</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="143690493173806" type="ShipParameters">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Y">7</param>
+                            <param id="2" name="Value">45</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Cruiser</comment>
+                <event-block sid="651063515613196">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="298550908935011" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="388895273429020" type="ShipParameters">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">8</param>
+                            <param id="2" name="Value">&quot;Cruiser&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="565099176909228" type="ShipParameters">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">8</param>
+                            <param id="2" name="Value">70</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="943934492034969" type="ShipParameters">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">8</param>
+                            <param id="2" name="Value">0.5</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="703893218277197" type="ShipParameters">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">8</param>
+                            <param id="2" name="Value">130</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="613743136463195" type="ShipParameters">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">8</param>
+                            <param id="2" name="Value">750</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="393342723534289" type="ShipParameters">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Y">8</param>
+                            <param id="2" name="Value">3</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="334000328540006" type="ShipParameters">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">8</param>
+                            <param id="2" name="Value">220</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="275006446102321" type="ShipParameters">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">8</param>
+                            <param id="2" name="Value">40</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="953783250846736" type="ShipParameters">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Y">8</param>
+                            <param id="2" name="Value">20</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="514169980779945" type="ShipParameters">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Y">8</param>
+                            <param id="2" name="Value">3</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="280053248158587" type="ShipParameters">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Y">8</param>
+                            <param id="2" name="Value">40</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="401250260954477" type="ShipParameters">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Y">8</param>
+                            <param id="2" name="Value">0.2</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="331223532180550" type="ShipParameters">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Y">8</param>
+                            <param id="2" name="Value">450</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="445880456796874" type="ShipParameters">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Y">8</param>
+                            <param id="2" name="Value">55</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Bomber</comment>
+                <event-block sid="233191172483460">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="928450404202085" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="361302007422374" type="ShipParameters">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">9</param>
+                            <param id="2" name="Value">&quot;Bomber&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="912312523213517" type="ShipParameters">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">9</param>
+                            <param id="2" name="Value">95</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="957824452235802" type="ShipParameters">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">9</param>
+                            <param id="2" name="Value">0.3</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="477852128463843" type="ShipParameters">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">9</param>
+                            <param id="2" name="Value">260</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="580723967826851" type="ShipParameters">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">9</param>
+                            <param id="2" name="Value">800</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="549852410229752" type="ShipParameters">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Y">9</param>
+                            <param id="2" name="Value">3</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="190097658281566" type="ShipParameters">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">9</param>
+                            <param id="2" name="Value">95</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="148636586361061" type="ShipParameters">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">9</param>
+                            <param id="2" name="Value">20</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="732425994029822" type="ShipParameters">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Y">9</param>
+                            <param id="2" name="Value">6</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="378213825237121" type="ShipParameters">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Y">9</param>
+                            <param id="2" name="Value">6</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="374936753141775" type="ShipParameters">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Y">9</param>
+                            <param id="2" name="Value">140</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="387088090822937" type="ShipParameters">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Y">9</param>
+                            <param id="2" name="Value">0.25</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="267525341656734" type="ShipParameters">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Y">9</param>
+                            <param id="2" name="Value">200</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="918943576770761" type="ShipParameters">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Y">9</param>
+                            <param id="2" name="Value">6</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Fighter</comment>
+                <event-block sid="893325534726219">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="209907621025510" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="776797987830361" type="ShipParameters">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">10</param>
+                            <param id="2" name="Value">&quot;Fighter&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="494985842375287" type="ShipParameters">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">10</param>
+                            <param id="2" name="Value">75</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="718157752237034" type="ShipParameters">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">10</param>
+                            <param id="2" name="Value">0.15</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="212857389205006" type="ShipParameters">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">10</param>
+                            <param id="2" name="Value">275</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="159155366846004" type="ShipParameters">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">10</param>
+                            <param id="2" name="Value">700</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="506571233784569" type="ShipParameters">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Y">10</param>
+                            <param id="2" name="Value">3</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="723981394811637" type="ShipParameters">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">10</param>
+                            <param id="2" name="Value">20</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="320623921075272" type="ShipParameters">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">10</param>
+                            <param id="2" name="Value">13</param>
+                        </action>
+                        <action disabled="1" id="3" name="Set at XY" sid="248833384229049" type="ShipParameters">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">10</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action disabled="1" id="3" name="Set at XY" sid="334773441601511" type="ShipParameters">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">10</param>
+                            <param id="2" name="Value">99</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="166475050657493" type="ShipParameters">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Y">10</param>
+                            <param id="2" name="Value">4</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="440641520123124" type="ShipParameters">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Y">10</param>
+                            <param id="2" name="Value">3</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="997575783807589" type="ShipParameters">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Y">10</param>
+                            <param id="2" name="Value">125</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="715113100967176" type="ShipParameters">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Y">10</param>
+                            <param id="2" name="Value">0.075</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="506768932139683" type="ShipParameters">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Y">10</param>
+                            <param id="2" name="Value">325</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="839832239870739" type="ShipParameters">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Y">10</param>
+                            <param id="2" name="Value">30</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Cleaner</comment>
+                <event-block sid="729953796839816">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="875195346496239" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="857519268646408" type="ShipParameters">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">11</param>
+                            <param id="2" name="Value">&quot;Cleaner&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="190230606774156" type="ShipParameters">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">11</param>
+                            <param id="2" name="Value">55</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="284451561922915" type="ShipParameters">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">11</param>
+                            <param id="2" name="Value">0.35</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="697361403804150" type="ShipParameters">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">11</param>
+                            <param id="2" name="Value">240</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="596025376423127" type="ShipParameters">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">11</param>
+                            <param id="2" name="Value">450</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="431919662619479" type="ShipParameters">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Y">11</param>
+                            <param id="2" name="Value">5</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="946887415865649" type="ShipParameters">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">11</param>
+                            <param id="2" name="Value">45</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="351133485995102" type="ShipParameters">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">11</param>
+                            <param id="2" name="Value">15</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="410619335190850" type="ShipParameters">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Y">11</param>
+                            <param id="2" name="Value">7</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="904549545758530" type="ShipParameters">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Y">11</param>
+                            <param id="2" name="Value">5</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="985765690454622" type="ShipParameters">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Y">11</param>
+                            <param id="2" name="Value">60</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="602417321072202" type="ShipParameters">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Y">11</param>
+                            <param id="2" name="Value">0.15</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="404694416247262" type="ShipParameters">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Y">11</param>
+                            <param id="2" name="Value">300</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="828264454418714" type="ShipParameters">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Y">11</param>
+                            <param id="2" name="Value">35</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Bat</comment>
+                <event-block sid="498769956603035">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="149828342479847" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="322146441979940" type="ShipParameters">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">12</param>
+                            <param id="2" name="Value">&quot;Bat&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="990705712306253" type="ShipParameters">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">12</param>
+                            <param id="2" name="Value">40</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="575059565923898" type="ShipParameters">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">12</param>
+                            <param id="2" name="Value">0.25</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="919051312306948" type="ShipParameters">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">12</param>
+                            <param id="2" name="Value">275</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="823102955703393" type="ShipParameters">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">12</param>
+                            <param id="2" name="Value">750</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="826712238536054" type="ShipParameters">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Y">12</param>
+                            <param id="2" name="Value">2</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="564634005373017" type="ShipParameters">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">12</param>
+                            <param id="2" name="Value">30</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="353948098521784" type="ShipParameters">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">12</param>
+                            <param id="2" name="Value">30</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="937953743989346" type="ShipParameters">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Y">12</param>
+                            <param id="2" name="Value">6</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="156501482986588" type="ShipParameters">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Y">12</param>
+                            <param id="2" name="Value">4</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="330732086415750" type="ShipParameters">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Y">12</param>
+                            <param id="2" name="Value">25</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="651385839158275" type="ShipParameters">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Y">12</param>
+                            <param id="2" name="Value">0.05</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="551256092988658" type="ShipParameters">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Y">12</param>
+                            <param id="2" name="Value">350</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="103308715511522" type="ShipParameters">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Y">12</param>
+                            <param id="2" name="Value">25</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Warmer</comment>
+                <event-block sid="801646435532592">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="222937491882198" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="840352440391880" type="ShipParameters">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">13</param>
+                            <param id="2" name="Value">&quot;Warmer&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="256803496725415" type="ShipParameters">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">13</param>
+                            <param id="2" name="Value">80</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="355318169093331" type="ShipParameters">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">13</param>
+                            <param id="2" name="Value">0.8</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="605953402159517" type="ShipParameters">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">13</param>
+                            <param id="2" name="Value">170</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="678761312042389" type="ShipParameters">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">13</param>
+                            <param id="2" name="Value">900</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="614622963511502" type="ShipParameters">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Y">13</param>
+                            <param id="2" name="Value">18</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="593325086495402" type="ShipParameters">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">13</param>
+                            <param id="2" name="Value">20</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="357526851361612" type="ShipParameters">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">13</param>
+                            <param id="2" name="Value">35</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="982589446417861" type="ShipParameters">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Y">13</param>
+                            <param id="2" name="Value">5</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="738352817831535" type="ShipParameters">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Y">13</param>
+                            <param id="2" name="Value">8</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="613631077557458" type="ShipParameters">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Y">13</param>
+                            <param id="2" name="Value">30</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="831762893049922" type="ShipParameters">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Y">13</param>
+                            <param id="2" name="Value">0.3</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="377255445009890" type="ShipParameters">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Y">13</param>
+                            <param id="2" name="Value">500</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="779406724622069" type="ShipParameters">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Y">13</param>
+                            <param id="2" name="Value">40</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>0-speed&#x0D;&#x0A;1-attackrange&#x0D;&#x0A;2-attackspeed&#x0D;&#x0A;3-damage&#x0D;&#x0A;4-health</comment>
+        <event-block sid="455304697211082">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="580991757259289" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="289880262526677" type="Audio">
+                    <param id="0" name="Audio file">BG</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Type0</comment>
+                <event-block sid="725946897630672">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="245494278537379" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="686572594789316" type="SyntheticsParams">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">180</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="816670507265578" type="SyntheticsParams">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">400</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="923089005589466" type="SyntheticsParams">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">0.2</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="816560646759766" type="SyntheticsParams">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="745901846281020" type="SyntheticsParams">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">25</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Type1</comment>
+                <event-block sid="171634951970418">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="400178478157051" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="402029248220988" type="SyntheticsParams">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">160</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="164521644137775" type="SyntheticsParams">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">600</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="710182928600006" type="SyntheticsParams">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">0.5</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="319054508032285" type="SyntheticsParams">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">2</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="297949330454205" type="SyntheticsParams">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">35</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Type2</comment>
+                <event-block sid="864592136823763">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="916185449217133" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="422407387446569" type="SyntheticsParams">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">250</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="242069041105041" type="SyntheticsParams">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">300</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="688212926633648" type="SyntheticsParams">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">0.15</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="243550843595758" type="SyntheticsParams">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="149554896348683" type="SyntheticsParams">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Type3</comment>
+                <event-block sid="840941192673255">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="637117958282632" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="120927990112008" type="SyntheticsParams">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">200</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="524606411423960" type="SyntheticsParams">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">350</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="926220382514877" type="SyntheticsParams">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">0.75</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="166721695899676" type="SyntheticsParams">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">2</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="762025554395702" type="SyntheticsParams">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Value">50</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
